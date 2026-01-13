@@ -12,13 +12,22 @@ class HomePageView extends StatelessWidget {
         color: Colors.blue,
         width: double.infinity,
         height: double.infinity,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            WidgetTimeMeteo(icon: Icons.wb_cloudy, tempMax: '14º', tempMin: '5º'),
-            WidgetTimeMeteo(icon: Icons.wb_sunny, tempMax: '17º', tempMin: '10º')
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: WidgetTimeMeteo(icon: Icons.wb_cloudy, tempMax: '14º', tempMin: '5º'),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: WidgetTimeMeteo(icon: Icons.wb_sunny, tempMax: '17º', tempMin: '10º'),
+              )
+            ],
+          ),
         ),
       ),
     );

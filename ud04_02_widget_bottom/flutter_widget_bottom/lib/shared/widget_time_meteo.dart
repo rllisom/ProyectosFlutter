@@ -19,10 +19,15 @@ class WidgetTimeMeteo extends StatelessWidget {
       children: [
         Icon(icon, color: Colors.white),
         const SizedBox(width: 8),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(tempMax, style: const TextStyle(color: Colors.white)),
+            const SizedBox(height: 8),
+            Text(tempMin, style: const TextStyle(color: Colors.white)),
+          ],
+        )
         
-        Text(tempMax, style: const TextStyle(color: Colors.)),
-        const SizedBox(width: 8),
-        Text(tempMin, style: const TextStyle(color: Colors.white)),
       ],
     );
   }
