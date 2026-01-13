@@ -1,0 +1,13 @@
+{
+  "dart.flutterSdkPath": "/Users/r.llinares/flutter",
+  "dart.sdkPath": "/Users/r.llinares/flutter/bin/cache/dart-sdk",
+  "dart.checkForSdkUpdates": false,
+  "dart.previewFlutterUiGuides": true,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "files.watcherExclude": {
+    "**/build/**": true,
+    "**/.dart_tool/**": true,
+    "**/.pub-cache/**": true
+  }
+}

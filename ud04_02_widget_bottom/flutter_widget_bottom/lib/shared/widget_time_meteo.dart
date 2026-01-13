@@ -17,14 +17,12 @@ class WidgetTimeMeteo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon,color: Colors.white,),
-        Column(
-          children: [
-            Text(tempMax,
-              style: TextStyle(color: Colors.white) ,),
-            Text(tempMin,style: TextStyle(color: Colors.white),)
-          ],
-        )
+        Icon(icon, color: Colors.white),
+        const SizedBox(width: 8),
+        
+        Text(tempMax, style: const TextStyle(color: Colors.)),
+        const SizedBox(width: 8),
+        Text(tempMin, style: const TextStyle(color: Colors.white)),
       ],
     );
   }

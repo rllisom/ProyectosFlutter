@@ -14,7 +14,7 @@ class HomePageView extends StatelessWidget {
         height: double.infinity,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             WidgetTimeMeteo(icon: Icons.wb_cloudy, tempMax: '14º', tempMin: '5º'),
             WidgetTimeMeteo(icon: Icons.wb_sunny, tempMax: '17º', tempMin: '10º')
