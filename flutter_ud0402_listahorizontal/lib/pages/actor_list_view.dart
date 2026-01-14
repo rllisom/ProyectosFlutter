@@ -26,12 +26,12 @@ class ActorListView extends StatelessWidget {
             const SizedBox(height: 150),
             Center(
               child: SizedBox(
-                height: 320,
+                height: 620,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: const [
                     Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(20.0),
                       child: WidgetActorCard(
                         imgUrl: "https://media.themoviedb.org/t/p/w300_and_h450_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
                         name: "Leonardo",

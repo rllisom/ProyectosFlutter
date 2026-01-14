@@ -22,13 +22,13 @@ class WidgetActorCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.vertical(
-              top: Radius.circular(70),
-              bottom: Radius.circular(70),
+              top: Radius.circular(90),
+              bottom: Radius.circular(90),
             ),
             child: Image.network(
               imgUrl,
-              width: 150,
-              height: 250,
+              width: 250,
+              height: 450,
               fit: BoxFit.cover,
             ),
           ),
@@ -38,11 +38,11 @@ class WidgetActorCard extends StatelessWidget {
             children: [
               Text(name,
               style: GoogleFonts.pinyonScript(
-                fontSize: 15,
+                fontSize: 25,
                 fontWeight: FontWeight.bold
               ),),
               Text(lastName,style: GoogleFonts.pinyonScript(
-                fontSize: 15
+                fontSize: 20
               ),)
             ],
           )
