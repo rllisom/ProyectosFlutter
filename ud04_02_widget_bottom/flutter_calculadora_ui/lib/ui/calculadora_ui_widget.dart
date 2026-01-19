@@ -48,9 +48,8 @@ class CalculadoraUiWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: double.infinity,
-                height: double.infinity,
+              SizedBox(height: 50,),
+              Expanded(
                 child: Column(
                   children: [
                     SizedBox(
@@ -59,7 +58,6 @@ class CalculadoraUiWidget extends StatelessWidget {
                         children: [
                           BotonCalculadoraWidget(colorFondo:Colors.grey,operacion: Icons.backspace , isIcon: true),
                         ]
-                        
                       ),
                     )
                   ],

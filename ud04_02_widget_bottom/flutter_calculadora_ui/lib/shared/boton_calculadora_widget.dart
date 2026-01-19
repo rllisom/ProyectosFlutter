@@ -17,11 +17,11 @@ class BotonCalculadoraWidget extends StatelessWidget {
       width: 60,
       height: 60,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(40),
         color: colorFondo,
       ),
       
-      child: isIcon? IconButton(onPressed: (){},padding: EdgeInsets.zero, icon: Icon(operacion as IconData,size: 20,color: Colors.white,)) 
+      child: isIcon? IconButton(onPressed: (){},padding: EdgeInsets.zero, icon: Icon(operacion as IconData,size: 25,color: Colors.white,)) 
         : Text(operacion,style: TextStyle(color: Colors.white),)
     );
   }
