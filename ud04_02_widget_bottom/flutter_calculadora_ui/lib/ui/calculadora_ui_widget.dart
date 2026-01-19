@@ -12,7 +12,7 @@ class CalculadoraUiWidget extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               SizedBox(height: 30,),
@@ -37,7 +37,7 @@ class CalculadoraUiWidget extends StatelessWidget {
                     child: IconButton(onPressed: (){}, icon: Icon(Icons.calculate,color: Colors.white,)))
                 ],
               ),
-              SizedBox(height: 150,),
+              SizedBox(height: 140,),
               SizedBox(
                 width: double.infinity,
                 child: Column(
@@ -48,16 +48,83 @@ class CalculadoraUiWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 40,),
               Expanded(
                 child: Column(
                   children: [
-                    SizedBox(
-                      width: double.infinity,
-                      child: Row(
-                        children: [
-                          BotonCalculadoraWidget(colorFondo:Colors.grey,operacion: Icons.backspace , isIcon: true),
-                        ]
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: Icons.backspace , isIcon: true),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion:"AC", isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "%" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo: Colors.orange,operacion: "/" , isIcon: false)
+                          ]
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "7" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion:"8", isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "9" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo: Colors.orange,operacion: "X" , isIcon: false)
+                          ]
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "4" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "5", isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "6" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo: Colors.orange,operacion: "-" , isIcon: false)
+                          ]
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "1" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion:"2", isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "3" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo: Colors.orange,operacion: "+" , isIcon: false)
+                          ]
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "+/-" , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion:"0", isIcon: false),
+                            BotonCalculadoraWidget(colorFondo:const Color.fromARGB(255, 121, 120, 120),operacion: "." , isIcon: false),
+                            BotonCalculadoraWidget(colorFondo: Colors.orange,operacion: "=" , isIcon: false)
+                          ]
+                        ),
                       ),
                     )
                   ],
