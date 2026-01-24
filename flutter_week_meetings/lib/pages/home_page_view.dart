@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_week_meetings/shared/meet_item.dart';
 
-class HomePageView extends StatelessWidget {
+class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+  State<HomePageView> createState() => _HomePageViewState();
+}
+
+class _HomePageViewState extends State<HomePageView> {
+  int _selectedIndex = 1; 
+
+  Widget _getBody() {
+    if (_selectedIndex == 0) {
+      return  Container(
+        color: Colors.white,
+        width: double.infinity,
+        height: double.infinity,
+        child: Center(child: Text("Página principal", style: TextStyle(fontSize: 24))));
+    } else if (_selectedIndex == 1) {
+      return Container(
         color: Colors.white,
         width: double.infinity,
         height: double.infinity,
@@ -43,22 +55,48 @@ class HomePageView extends StatelessWidget {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home"
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.meeting_room),
-            label: "Meets"
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile"
+      );
+    } else {
+      return Container(
+        color: Colors.white,
+        width: double.infinity,
+        height: double.infinity,
+        child: Center(child: Text("Perfil de usuario", style: TextStyle(fontSize: 24,color: Colors.black))));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _getBody(),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadiusGeometry.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20)
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: const Color.fromARGB(255, 227, 227, 227),
+          currentIndex: _selectedIndex,
+          onTap: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.meeting_room),
+              label: "Meets"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Profile"
             )
-        ] 
+          ] 
+        ),
       ),
     );
   }
