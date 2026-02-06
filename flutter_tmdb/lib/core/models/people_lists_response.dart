@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class PeopleListsResponse {
   final int page;
   final List<Person> results;
