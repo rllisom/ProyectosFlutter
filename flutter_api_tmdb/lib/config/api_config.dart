@@ -1,0 +1,3 @@
+class ApiConfig {
+  static const String apikey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzg2YWVkYTIwMGQ2OGVmNjE1ZWRmYzBhN2ZkY2Q1ZiIsIm5iZiI6MTc2MzM2NzcyNy4yMTYsInN1YiI6IjY5MWFkYjJmMmUzNjVhYjBjNzUyZTkwZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oki2cvgI5g4rECqlqba58uOU0eTqkYiBVKuhoVXyyQ0';
+}
